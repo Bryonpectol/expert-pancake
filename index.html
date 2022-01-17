@@ -16,8 +16,16 @@
 Your browser does not support the audio element.
 </audio>
         
-        <a href="">... - .- .-. - / .- -.. ...- . -. - ..- .-. . / .--. .-.. . .- ... .</a>
+        <button onclick="Play()"><a href="">... - .- .-. - / .- -.. ...- . -. - ..- .-. . / .--. .-.. . .- ... .</a></button>
         
-        <script src="" async defer></script>
+        <script>
+        
+            function Play() {
+                const music = new Audio('/nightingale.mp3');
+                music.play();
+                music.loop =true;
+            }
+            
+        </script>
     </body>
 </html>
