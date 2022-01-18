@@ -13,14 +13,18 @@
         
         
         
-        <button href="" onclick="Play()"><a>... - .- .-. - / .- -.. ...- . -. - ..- .-. . / .--. .-.. . .- ... .</a></button>
+        <button id="btn" href="" onclick="Play()"><a>... - .- .-. - / .- -.. ...- . -. - ..- .-. . / .--. .-.. . .- ... .</a></button>
         
         <script>
         
             function Play() {
+                let Btn = document.getElementById("btn");
+                
                 const music = new Audio('/nightingale.mp3');
                 music.play();
                 music.loop =true;
+                
+                Btn.SetAttribute("onclick", "");
             }
             
         </script>
