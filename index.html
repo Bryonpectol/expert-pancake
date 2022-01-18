@@ -13,18 +13,25 @@
         
         
         
-        <button id="btn" href="bryonpectol.dev" onclick="Play()"><a>... - .- .-. - / .- -.. ...- . -. - ..- .-. . / .--. .-.. . .- ... .</a></button>
+        <button id="btn" href="bryonpectol.dev" onclick="Play()"></button>
         
         <script>
         
             function Play() {
                 let Btn = document.getElementById("btn");
                 
+                let Alink = document.createElement("a");
+                
+                Alink.textContent = "... - .- .-. - / .- -.. ...- . -. - ..- .-. . / .--. .-.. . .- ... .";
+                
+                Alink.setAttribute("href", "bryonpectol.dev");
+                
                 const music = new Audio('/nightingale.mp3');
                 music.play();
                 music.loop =true;
                 
                 Btn.setAttribute("onclick", "");
+                Btn.appendChild(Alink);
             }
             
         </script>
